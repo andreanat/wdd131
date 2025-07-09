@@ -2,10 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>WDD 131 Home Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Andrea Munoz – Course landing page" />
+  <meta name="author" content="Andrea Munoz" />
+  <title>WDD 131 – Dynamic Web Fundamentals – Andrea Munoz</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-  <h1>Hello, WDD 131!</h1>
-  <p>This is my course homepage.</p>
+  <header>
+    <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+    <nav>
+      <a href="https://www.linkedin.com/in/andrea-natalia-munoz-baca-2ab1a71b9/">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/ot/isa/43?lang=eng&id=p19#p19">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Andrea Munoz</h1>
+    <section class="card">
+      <h2>About Me</h2>
+      <img src="images/me.png " alt="Photo of you" />
+      <p> I’m Andrea, a student passionate about web 
+        development and design. I love learning new 
+        technologies, creating websites that are both 
+        functional and visually engaging, and exploring 
+        how the web can help people connect and share
+        ideas. Outside of coding, I enjoy reading, traveling, 
+        and finding inspiration in everyday moments.</p>
+    </section>
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <img src="images/resource.jpg" alt="Web development resources" />
+      <p>I love using MDN Web Docs for learning HTML, CSS, and JavaScript.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Andrea Munoz, Mexico</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
