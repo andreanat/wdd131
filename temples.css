@@ -1,0 +1,98 @@
+/* Base styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c3fcf1; /* background color from your palette */
+    color: #005b4a; /* text color */
+  }
+  
+  header {
+    background-color: #005b4a;
+    color: white;
+    padding: 1rem;
+    position: relative;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  /* Navigation */
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    background-color: #4b8078;
+    border-radius: 4px;
+  }
+  
+  nav a:hover {
+    background-color: #fbb763;
+    color: #005b4a;
+  }
+  
+  /* Hamburger button */
+  #menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Hide nav by default */
+  nav {
+    display: none;
+  }
+  
+  /* Show nav when open */
+  nav.open {
+    display: flex;
+  }
+  
+  /* Main content */
+  main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 1rem;
+  }
+  
+  /* Figure styling */
+  figure {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #005b4a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
