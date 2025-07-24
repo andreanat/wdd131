@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Spain.">
+  <meta name="author" content="Andrea Munoz">
+  <title>Spain</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Spain</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Culture</a></li>
+        <li><a href="#">Food</a></li>
+        <li><a href="#">Weather</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <picture>
+      <source srcset="images/spainlarge.webp" media="(min-width: 800px)">
+      <source srcset="images/spainmedium.webp" media="(min-width: 500px)">
+      <img src="images/spainsmall.webp" alt="Beautiful view of Spain" loading="lazy">
+    </picture>
+  </section>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p>Spain is known for its rich history, art, and vibrant culture.</p>
+    </section>
+
+    <section>
+      <h2>Weather ⛅</h2>
+      <p>Temperature: <span id="temp">45</span>°F</p>
+      <p>Wind Speed: <span id="wind">8</span> mph</p>
+      <p>Wind Chill: <span id="chill">Calculating...</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
