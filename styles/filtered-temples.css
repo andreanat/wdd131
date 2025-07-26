@@ -64,14 +64,24 @@ body {
   
   /* Main content */
   main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    display: grid;
-    grid-template-columns: 1fr; /* 1 column on mobile */
-    gap: 1rem;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main section {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+  main section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
   /* Figure styling */
   figure {
     background-color: white;
