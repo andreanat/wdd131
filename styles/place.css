@@ -3,6 +3,12 @@
   margin: 0;
   padding: 0;
 }
+:root {
+  --main-bg: #F1BF00;
+  --accent: #AA151B;
+  --text-dark: #000;
+  --text-light: #fff;
+}
 
 body {
   font-family: system-ui, sans-serif;
@@ -83,5 +89,20 @@ footer {
   nav ul {
     flex-direction: column;
     gap: 0.75rem;
+  }
+}
+.mobile-weather {
+  display: none;
+  width: 40px; 
+}
+
+#weather::after {
+  content: " ⛅";
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  #weather::after {
+    content: "";
   }
 }
