@@ -37,7 +37,7 @@ nav ul {
 }
 
 nav a {
-  color: #F1BF00;
+  color: var(--main-bg); 
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -62,9 +62,10 @@ main {
   padding: 2rem 1rem;
   max-width: 900px;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: var(--text-light);
   border-radius: 8px;
 }
+
 
 main h2 {
   color: #0039F0; 
