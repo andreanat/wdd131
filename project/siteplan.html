@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Project Site Plan for final WDD131 website" />
+  <meta name="author" content="Andrea Natalia Munoz Baca" />
+  <title>Site Plan | Budget Bites</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🍲</div>
+    <h1>Budget Bites</h1>
+    <p class="tagline">Fast, affordable, and tasty meals for busy students</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="sitename">
+      <h2 id="sitename">Site Name</h2>
+      <p><strong>Budget Bites</strong> — clear, memorable, and communicates the value: budget-friendly cooking. I chose it because it resonates with the target audience (students & beginners) and fits the content (quick, low-cost meals).</p>
+      <p class="muted">Optional domain idea: <code>budget-bites.me</code> (not required for class)</p>
+    </section>
+
+    <section aria-labelledby="purpose">
+      <h2 id="purpose">Site Purpose</h2>
+      <p>
+        The site provides a hub for quick, nutritious recipes (20 minutes or less),
+        simple meal prep plans, a grocery cost estimator, and a small recipe-request
+        form. It focuses on accessibility, clear instructions, and ingredients that
+        are easy to find.
+      </p>
+      <ul>
+        <li>Recipe cards with prep time, cost per serving, and dietary tags</li>
+        <li>“Build a shopping list” tool (localStorage)</li>
+        <li>Interactive filters (arrays & array methods)</li>
+        <li>Contact/Request form (valid, accessible HTML form)</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="scenarios">
+      <h2 id="scenarios">Scenarios (Target Audience Questions)</h2>
+      <ul>
+        <li>“I have $15 and 30 minutes—what can I cook for 2 people tonight?”</li>
+        <li>“Can I filter recipes by vegetarian and under 500 calories?”</li>
+        <li>“How do I turn these recipes into a shopping list I can save?”</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="colors">
+      <h2 id="colors">Color Schema</h2>
+      <p>This plan uses the palette consistently on this document (as required):</p>
+      <div class="swatches">
+        <div class="swatch" style="--sw: #AA151B"><span>#AA151B Animal Blood</span><small>Buttons & accents</small></div>
+        <div class="swatch" style="--sw: #F1BF00"><span>#F1BF00 American Yellow</span><small>Highlights & links</small></div>
+        <div class="swatch" style="--sw: #0039F0"><span>#0039F0 RYB Blue</span><small>Headings</small></div>
+        <div class="swatch" style="--sw: #CCCCCC"><span>#CCCCCC Silver</span><small>Subtle backgrounds</small></div>
+        <div class="swatch" style="--sw: #058E6E"><span>#058E6E Green-Cyan</span><small>Success/UI states</small></div>
+      </div>
+    </section>
+
+    <!-- Typography -->
+    <section aria-labelledby="type">
+      <h2 id="type">Typography</h2>
+      <p>
+        <strong>Roboto</strong> (Google Fonts) — clean, readable, widely available.
+        <br><em>Headings:</em> Roboto 700. <em>Body:</em> Roboto 400.
+      </p>
+      <div class="type-demo">
+        <h3>Heading Example (Roboto 700)</h3>
+        <p>Body text example (Roboto 400): friendly, readable, and accessible.</p>
+      </div>
+    </section>
+
+    <!-- Wireframes -->
+    <section aria-labelledby="wireframes">
+      <h2 id="wireframes">Wireframes (Home Page)</h2>
+
+      <div class="wireframe-grid">
+        <figure>
+          <figcaption>Mobile (≤ 600px)</figcaption>
+          <!-- Simple inline SVG wireframe -->
+          <svg viewBox="0 0 360 640" role="img" aria-label="Mobile wireframe">
+            <rect x="0" y="0" width="360" height="640" fill="#fff" stroke="#0039F0" />
+            <rect x="20" y="20" width="320" height="60" fill="#CCCCCC"/>
+            <rect x="20" y="100" width="320" height="140" fill="#F1BF00"/>
+            <rect x="20" y="260" width="320" height="80" fill="#CCCCCC"/>
+            <rect x="20" y="360" width="320" height="200" fill="#EEEEEE" />
+            <rect x="20" y="580" width="320" height="40" fill="#CCCCCC"/>
+          </svg>
+          <ul class="legend">
+            <li>Header / Nav</li>
+            <li>Hero</li>
+            <li>Filters</li>
+            <li>Recipe Cards (stacked)</li>
+            <li>Footer</li>
+          </ul>
+        </figure>
+
+        <figure>
+          <figcaption>Desktop (≥ 900px)</figcaption>
+          <svg viewBox="0 0 960 540" role="img" aria-label="Desktop wireframe">
+            <rect x="0" y="0" width="960" height="540" fill="#fff" stroke="#0039F0" />
+            <rect x="20" y="20" width="920" height="70" fill="#CCCCCC"/>
+            <rect x="20" y="110" width="920" height="160" fill="#F1BF00"/>
+            <rect x="20" y="290" width="220" height="210" fill="#CCCCCC"/>
+            <rect x="260" y="290" width="680" height="210" fill="#EEEEEE"/>
+            <rect x="20" y="510" width="920" height="20" fill="#CCCCCC"/>
+          </svg>
+          <ul class="legend">
+            <li>Header / Horizontal Nav</li>
+            <li>Wide Hero</li>
+            <li>Sidebar Filters</li>
+            <li>Recipe Grid</li>
+            <li>Footer</li>
+          </ul>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Pages & Tech (nice to include, helps you later) -->
+    <section aria-labelledby="pages-tech">
+      <h2 id="pages-tech">Planned Pages & Key Tech</h2>
+      <ul>
+        <li><strong>index.html</strong> — Home (hero, featured recipes, filters)</li>
+        <li><strong>recipes.html</strong> — Full recipe grid + detail modal</li>
+        <li><strong>plan.html</strong> — Meal plan & shopping list (localStorage)</li>
+        <li><strong>contact.html</strong> — Request/feedback form (HTML form)</li>
+      </ul>
+      <p><strong>JavaScript features:</strong> multiple functions, DOM events, conditional logic, objects & arrays with <code>filter/map/reduce</code>, template literals only, and <code>localStorage</code> for saved lists.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Budget Bites • Site Plan • <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+    // Footer dynamic info
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+  </script>
+</body>
+</html>
