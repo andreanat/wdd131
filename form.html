@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Review Form</title>
+  <meta name="description" content="Submit a product review." />
+  <meta name="author" content="Andrea Natalia Munoz Baca" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css" />
+  <script defer src="scripts/form.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Product Review</h1>
+    <p class="muted">Please complete the form below.</p>
+  </header>
+
+  <main class="container">
+    <form id="reviewForm" method="get" action="review.html" novalidate>
+      <fieldset>
+        <legend>Product</legend>
+
+        <label for="product">Product Name <span aria-hidden="true" class="req">*</span></label>
+        <select id="product" name="product" required>
+          <option value="" selected disabled>Select a Product …</option>
+          <!-- options inserted by JS -->
+        </select>
+        <p class="hint" id="productHint">Choose the product you installed.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Overall Rating <span aria-hidden="true" class="req">*</span></legend>
+
+        <div class="rating" role="radiogroup" aria-label="Overall rating">
+          <!-- Radios 1–5 (same name, required) -->
+          <input type="radio" name="rating" id="rate1" value="1" required>
+          <label for="rate1" title="1 star">★</label>
+
+          <input type="radio" name="rating" id="rate2" value="2">
+          <label for="rate2" title="2 stars">★</label>
+
+          <input type="radio" name="rating" id="rate3" value="3">
+          <label for="rate3" title="3 stars">★</label>
+
+          <input type="radio" name="rating" id="rate4" value="4">
+          <label for="rate4" title="4 stars">★</label>
+
+          <input type="radio" name="rating" id="rate5" value="5">
+          <label for="rate5" title="5 stars">★</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Date of Installation <span aria-hidden="true" class="req">*</span></legend>
+
+        <label for="installDate">Installed on</label>
+        <input type="date" id="installDate" name="installDate" required />
+      </fieldset>
+
+      <fieldset>
+        <legend>Useful Features (check all that apply)</legend>
+
+        <div class="checks">
+          <div>
+            <input type="checkbox" id="feat-durability" name="features" value="Durability">
+            <label for="feat-durability">Durability</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feat-ease" name="features" value="Ease of Use">
+            <label for="feat-ease">Ease of Use</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feat-performance" name="features" value="Performance">
+            <label for="feat-performance">Performance</label>
+          </div>
+          <div>
+            <input type="checkbox" id="feat-design" name="features" value="Design">
+            <label for="feat-design">Design</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Written Review (optional)</legend>
+
+        <label for="reviewText">Your Review</label>
+        <textarea id="reviewText" name="reviewText" rows="5" placeholder="Tell us about your experience…"></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Info (optional)</legend>
+
+        <label for="userName">Name</label>
+        <input type="text" id="userName" name="userName" autocomplete="name" />
+      </fieldset>
+
+      <div class="actions">
+        <input type="submit" value="Post Review" class="btn" />
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Andrea Natalia Munoz Baca • WDD 131</p>
+    <p id="lastModified" class="muted"></p>
+  </footer>
+
+  <script>
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = 'Last modified: ' + document.lastModified;
+  </script>
+</body>
+</html>
