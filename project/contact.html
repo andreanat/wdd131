@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Contact form for Study Abroad Europe — dynamic select and submission counter." />
+  <title>Contact — Study Abroad Europe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar container">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span>Study Abroad Europe</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="mt-0">Contact</h1>
+      <p class="lead">Ask us about programs, budgets, or packing. We’ll reply via email.</p>
+
+      <!-- Confirmation message after submission (GET) -->
+      <div id="confirm" class="card hidden">
+        <div class="card__body">
+          <h2 class="mt-0">Thanks! Your message was sent.</h2>
+          <p>You’ve submitted <strong><span id="reviewCounter">0</span></strong> form(s) on this site in this browser.</p>
+        </div>
+      </div>
+
+      <form class="form" id="contactForm" method="get" action="contact.html" novalidate>
+        <div class="row two">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="row two">
+          <div>
+            <label for="product">Topic</label>
+            <select id="product" name="product" required></select>
+            <p class="help">This list is populated dynamically.</p>
+          </div>
+          <div>
+            <label for="date">Target Start Date</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+        </div>
+
+        <div>
+          <label>Useful features you want</label>
+          <div class="checklist">
+            <label><input type="checkbox" name="features" value="scholarships"> Scholarship list</label>
+            <label><input type="checkbox" name="features" value="housing"> Housing guidance</label>
+            <label><input type="checkbox" name="features" value="packing"> Packing checklist</label>
+            <label><input type="checkbox" name="features" value="budget"> Budget template</label>
+          </div>
+        </div>
+
+        <div class="mt-2">
+          <label for="msg">Message (optional)</label>
+          <textarea id="msg" name="message" placeholder="Ask anything specific…"></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Study Abroad Europe · Last updated: <span id="lastModified"></span></small>
+    </div>
+  </footer>
+
+  <script>
+    const hasParams = new URLSearchParams(location.search).toString().length > 0;
+    if (hasParams){
+      document.getElementById('confirm').classList.remove('hidden');
+    }
+  </script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</body>
+</html>

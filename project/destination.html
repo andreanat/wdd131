@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Top European study abroad destinations with pros, cons and scholarships." />
+  <title>Destinations — Study Abroad Europe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar container">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span>Study Abroad Europe</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html" aria-current="page">Destinations</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="mt-0">Top Destinations</h1>
+      <p class="lead">A quick glance at three popular choices. Scholarships and costs vary by program.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img class="card__media" src="images/spain.webp" alt="Spain" loading="lazy" width="640" height="400">
+          <div class="card__body">
+            <h2 class="card__title">Spain</h2>
+            <p>Pros: Culture, climate, Spanish language. Cons: Some programs competitive.</p>
+            <p class="card__meta"><span class="chip">Budget</span> <span class="chip">Language</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__media" src="images/germany.webp" alt="Germany" loading="lazy" width="640" height="400">
+          <div class="card__body">
+            <h2 class="card__title">Germany</h2>
+            <p>Pros: Strong STEM, many English courses. Cons: Housing tight in big cities.</p>
+            <p class="card__meta"><span class="chip">STEM</span> <span class="chip">Research</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__media" src="images/netherlands.webp" alt="Netherlands" loading="lazy" width="640" height="400">
+          <div class="card__body">
+            <h2 class="card__title">Netherlands</h2>
+            <p>Pros: English-taught programs, safe. Cons: Cost of living can be high.</p>
+            <p class="card__meta"><span class="chip">English-taught</span> <span class="chip">Safe</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Study Abroad Europe · Last updated: <span id="lastModified"></span></small>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

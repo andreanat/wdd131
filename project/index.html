@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A beginner’s guide to studying abroad in Europe: destinations, tips, budgeting, and planning." />
+  <title>Study Abroad Europe — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar container">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span>Study Abroad Europe</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="nav" id="primaryNav">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="tips.html">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero__inner">
+      <div>
+        <h1>Study Abroad in Europe — Start Here</h1>
+        <p class="lead">Practical guides, destinations, budgets, and real tips for first-time students.</p>
+        <div class="mt-1">
+          <a class="btn" href="destinations.html">Explore Destinations</a>
+          <a class="btn outline" href="#weather">Check Weather</a>
+        </div>
+      </div>
+      <img class="card__media" src="images/hero.webp" alt="Student overlooking a European city at sunset" loading="lazy" width="800" height="500">
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Featured Countries</h2>
+      <p class="lead">Pros, cons, costs, and scholarships for first-timers.</p>
+
+      <div class="grid">
+        <article class="card">
+          <img class="card__media" src="images/spain.webp" alt="Spain" loading="lazy" width="640" height="400">
+          <div class="card__body">
+            <h3 class="card__title">Spain</h3>
+            <p class="card__meta"><span class="chip">Budget-friendly</span> <span class="chip">Great weather</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__media" src="images/germany.webp" alt="Germany" loading="lazy" width="640" height="400">
+          <div class="card__body">
+            <h3 class="card__title">Germany</h3>
+            <p class="card__meta"><span class="chip">Top universities</span> <span class="chip">Strong STEM</span></p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__media" src="images/netherlands.webp" alt="Netherlands" loading="lazy" width="640" height="400">
+          <div class="card__body">
+            <h3 class="card__title">Netherlands</h3>
+            <p class="card__meta"><span class="chip">English-taught</span> <span class="chip">Cycling culture</span></p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="weather">
+    <div class="container">
+      <h2>Weather — Madrid ⛅</h2>
+      <p class="lead">A quick example of a simple weather widget (static data) with windchill.</p>
+      <div class="card">
+        <div class="card__body">
+          <p>Temperature: <strong><span id="temp">--</span> °F</strong></p>
+          <p>Wind: <strong><span id="wind">--</span> mph</strong></p>
+          <p>Wind Chill: <strong><span id="chill">N/A</span></strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Study Abroad Europe · Last updated: <span id="lastModified"></span></small>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+</body>
+</html>

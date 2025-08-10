@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Travel tips, packing, budgeting, and a personal checklist with localStorage." />
+  <title>Travel Tips — Study Abroad Europe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="navbar container">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true"></span>
+        <span>Study Abroad Europe</span>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Open menu">☰</button>
+      <nav class="nav" id="primaryNav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="tips.html" aria-current="page">Travel Tips</a>
+        <a href="contact.html">Contact</a>
+        <a href="references.html">References</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 class="mt-0">Travel Tips</h1>
+      <p class="lead">Budgeting, packing smart, and making the most of your semester.</p>
+
+      <section class="card">
+        <div class="card__body">
+          <h2 class="mt-0">Budget Basics</h2>
+          <ul>
+            <li>Track monthly rent, transit, groceries, and emergency fund.</li>
+            <li>Use student discounts (museums, trains, SIMs).</li>
+            <li>Cook most meals, splurge mindfully.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card" id="checklistSection">
+        <div class="card__body">
+          <h2 class="mt-0">Custom Checklist</h2>
+          <p class="help">Add your own items. They’ll persist in this browser via localStorage.</p>
+
+          <form id="addItemForm" class="row two" autocomplete="off">
+            <div>
+              <label for="newItem">New item</label>
+              <input id="newItem" name="newItem" type="text" placeholder="e.g., Order ISIC card" required>
+            </div>
+            <div class="actions" style="align-items:end;">
+              <button class="btn" type="submit">Add</button>
+            </div>
+          </form>
+
+          <ul id="checklist" class="mt-2"></ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>&copy; <span id="year"></span> Study Abroad Europe · Last updated: <span id="lastModified"></span></small>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/checklist.js" defer></script>
+</body>
+</html>
